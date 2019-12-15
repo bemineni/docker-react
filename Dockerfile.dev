@@ -3,8 +3,6 @@ FROM node:alpine
 WORKDIR '/app'
 
 COPY package.json .
-RUN npm set proxy http://web-proxy.houston.hpecorp.net
-RUN npm set https-proxy http://web-proxy.houston.hpecorp.net:8080
 RUN npm install
 
 COPY . .
